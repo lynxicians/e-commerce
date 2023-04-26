@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class produk extends Model
 {
-    use HasFactory;
+    protected $fillable = ['Quantity'];
+    protected $primaryKey = 'ProductID';
+    public function penjualan()
+    {        
+        return $this->hasMany('App\Models\Penjualan', 'ProductID');
+    }
 }

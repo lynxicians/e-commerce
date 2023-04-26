@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('penjualans', function (Blueprint $table) {
             $table->id('SOID');
-            $table->unsignedBigInteger('customer_id');
+            $table->unsignedBigInteger('users_id');
             $table->unsignedBigInteger('product_id');
             $table->datetime('DateOrder');
             $table->double('Quantity');
             $table->timestamps();
             
             // Foreign keys
-            $table->foreign('customer_id')->references('CustID')->on('customers')->onDelete('cascade');
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('product_id')->references('ProductID')->on('produks')->onDelete('cascade');
         });
     }

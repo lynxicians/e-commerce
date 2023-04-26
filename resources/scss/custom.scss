@@ -1,0 +1,31 @@
+@use "sass:map"; //ini fungsinya buat mapping, kalau bikin utility custom sendiri nanti gw ajarin ini rada ribet
+
+.dashboard-wrapper{
+    .ecommerce-container{
+        h1{
+            color: gray;
+        }
+        .sub-title{
+            font-size: 20px;
+            .sub-point{
+                color: blue;
+            }
+        }
+    }
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
